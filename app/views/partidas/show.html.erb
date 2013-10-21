@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Diametro:</strong>
+  <%= @partida.diametro %>
+</p>
+
+<p>
+  <strong>Parteobra:</strong>
+  <%= @partida.parteobra %>
+</p>
+
+<%= link_to 'Edit', edit_partida_path(@partida) %> |
+<%= link_to 'Back', partidas_path %>

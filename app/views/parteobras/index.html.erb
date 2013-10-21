@@ -1,0 +1,27 @@
+<h1>Listing parteobras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parteobras.each do |parteobra| %>
+      <tr>
+        <td><%= parteobra.nombre %></td>
+        <td><%= link_to 'Show', parteobra %></td>
+        <td><%= link_to 'Edit', edit_parteobra_path(parteobra) %></td>
+        <td><%= link_to 'Destroy', parteobra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parteobra', new_parteobra_path %>
